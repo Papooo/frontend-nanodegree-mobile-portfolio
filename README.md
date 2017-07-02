@@ -17,6 +17,8 @@ Changes done by me to achieve better webpage performance:
 #### Part 2: Optimize Frames per Second in pizza.html
 
 1. Critical rendering path analyzed, forced layout reflows found and removed.
+
+2. Faster web API call used - `document.getElementById()` and `document.getElementByClassName()` instead of `document.querySelector()` and `document.querySelectorAll()`
      
 2. Performance increased with hardware accelerated CSS - the GPU triggered by including the `transform: translateZ(0)`; declaration for `.mover` class in `pizza.html`. 
 
