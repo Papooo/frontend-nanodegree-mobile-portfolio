@@ -1,4 +1,16 @@
-# Performance Optimization
+## Performance Optimization
+
+This is a project for Udacity performance optimization course. Instructions for the project are listed below in other sections of this document. Changes done by me to achieve better webpage performance:
+
+#### Part 1: Optimize PageSpeed Insights score for index.html
+
+1. Size of images optimized.
+
+2. All styles inlined.
+
+3. Fonts served locally.
+
+4. Critical rendering path blocking scripts loaded asynchronously by adding `async` attribute.
 
 ## Website Performance Optimization portfolio project
 
