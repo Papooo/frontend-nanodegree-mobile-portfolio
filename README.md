@@ -8,7 +8,7 @@ Changes done by me to achieve better webpage performance:
 
 1. Size of images optimized.
 
-2. All styles inlined.
+2. All styles inlined in `<head>`.
 
 3. Fonts served locally.
 
