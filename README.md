@@ -6,21 +6,25 @@ Changes done by me to achieve better webpage performance:
 
 #### Part 1: Optimize PageSpeed Insights score for index.html
 
-1. Size of images optimized.
+* Size of images optimized.
 
-2. All styles inlined in `<head>`.
+* All styles inlined in `<head>`.
 
-3. Fonts served locally.
+* Fonts served locally.
 
-4. Critical rendering path blocking scripts loaded asynchronously by adding `async` attribute.
+* Critical rendering path blocking scripts loaded asynchronously by adding `async` attribute.
 
 #### Part 2: Optimize Frames per Second in pizza.html
 
-1. Critical rendering path analyzed, forced layout reflows found and removed.
+* Critical rendering path analyzed, forced layout reflows found and removed.
 
-2. Faster web API call used - `document.getElementById()` and `document.getElementByClassName()` instead of `document.querySelector()` and `document.querySelectorAll()`
+* Faster web API calls used - `document.getElementById()` and `document.getElementByClassName()` instead of `document.querySelector()` and `document.querySelectorAll()`
+
+* Local variables outside the loop created when possible, so the DOM is not explicitly touched in every iteration.
+
+* Instead of static 200, number of pizzas needed to fill the screen calculated dynamically, based on browser window resolution.
      
-2. Performance increased with hardware accelerated CSS - the GPU triggered by including the `transform: translateZ(0)`; declaration for `.mover` class in `pizza.html`. 
+* Performance increased with hardware accelerated CSS - the GPU triggered by including the `transform: translateZ(0)`; declaration for `.mover` class in `pizza.html`. 
 
-3. `backface-visibility: hidden` property (which can make a huge difference in no so powerful equipments as it enables hardware acceleration) added for `.mover` class in `pizza.html`.
+* `backface-visibility: hidden` property (which can make a huge difference in no so powerful equipments as it enables hardware acceleration) added for `.mover` class in `pizza.html`.
 
