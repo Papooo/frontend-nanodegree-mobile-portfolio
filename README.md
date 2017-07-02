@@ -16,7 +16,27 @@ Changes done by me to achieve better webpage performance:
 
 #### Part 2: Optimize Frames per Second in pizza.html
 
-1. Critical rendering path analyzed and 
+1. Critical rendering path analyzed, forced layout reflows found and removed.
+
+  function changePizzaSizes(size) {
+      for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+        var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
+       var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+       }
+    }
+
+  function changePizzaSizes(size) {
+      for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+        var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
+ -      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+ -      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+ +    }
+ +    for (var j = 0; j < document.querySelectorAll(".randomPizzaContainer").length; j++) {
+ +      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[j].offsetWidth + dx) + 'px';
+ +      document.querySelectorAll(".randomPizzaContainer")[j].style.width = newwidth;
+      }
+    }
 
 2. Performance increased with hardware accelerated CSS - the GPU triggered by including the `transform: translateZ(0)`; declaration for `.mover` class in `pizza.html`. 
 
