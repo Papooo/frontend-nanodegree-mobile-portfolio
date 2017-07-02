@@ -43,6 +43,12 @@
             width: 256px;
             will-change: top, left;
             z-index: -1;
+            transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+
         }
         .randomPizzaContainer {
             float: left;
