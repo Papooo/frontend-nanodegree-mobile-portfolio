@@ -18,7 +18,7 @@ Changes done by me to achieve better webpage performance:
 
 1. Critical rendering path analyzed and 
 
-2. Performance increased with hardware accelerated CSS - the GPU triggered by including the 'transform: translateZ(0)'; declaration for '.mover' class in 'pizza.html'. 
+2. Performance increased with hardware accelerated CSS - the GPU triggered by including the `transform: translateZ(0)`; declaration for `.mover` class in `pizza.html`. 
 
-3. 'backface-visibility: hidden' property (which can make a huge difference in no so powerful equipments as it enables hardware acceleration) added for '.mover' class in 'pizza.html'.
+3. `backface-visibility: hidden` property (which can make a huge difference in no so powerful equipments as it enables hardware acceleration) added for `.mover` class in `pizza.html`.
 
