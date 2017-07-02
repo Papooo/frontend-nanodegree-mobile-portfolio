@@ -25,6 +25,8 @@ Changes done by me to achieve better webpage performance:
                document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
                }
         }
+        
+        
 
         function changePizzaSizes(size) {
                 var container = document.getElementsByClassName("randomPizzaContainer");
