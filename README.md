@@ -19,6 +19,7 @@ Changes done by me to achieve better webpage performance:
 1. Critical rendering path analyzed, forced layout reflows found and removed.
 
     Function changePizzaSizes given
+    
         function changePizzaSizes(size) {
               for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
                 var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
@@ -28,6 +29,7 @@ Changes done by me to achieve better webpage performance:
         }
 
     Optimized version
+    
         function changePizzaSizes(size) {
                 var container = document.getElementsByClassName("randomPizzaContainer");
                 var len = container.length;
